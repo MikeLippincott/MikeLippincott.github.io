@@ -1,0 +1,5 @@
+name: jekyll_env
+channels:
+  - conda-forge
+dependencies:
+  - ruby
