@@ -1,7 +1,10 @@
 <!DOCTYPE html>
 <html>
 {% include head.html %}
-
+<head>
+  <!-- Include Font Awesome -->
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0-beta3/css/all.min.css">
+</head>
 <body id="page-top" class="index">
   {% include nav.html %}
   {% include header.html %}
@@ -13,12 +16,12 @@
   {% include languages.html %}
   {% include footer.html %}
   {% include js.html %}
-  <button id="back-to-top" title="Back to Top">↑</button>
-
+  <button id="back-to-top" title="Back to Top">
+    <i class="fa-solid fa-flask"></i>
+  </button>
 
 </body>
 <script>
-    // Get the button
     var mybutton = document.getElementById("back-to-top");
   
     // When the user scrolls down 20px from the top of the document, show the button
@@ -34,10 +37,36 @@
       }
     }
   
-    // When the user clicks on the button, scroll to the top of the document
+    // When the user clicks on the button, scroll to the top of the document with easing
     mybutton.onclick = function() {
-      document.body.scrollTop = 0;
-      document.documentElement.scrollTop = 0;
+      scrollToTop(1000); // Duration in milliseconds
     };
+
+    function scrollToTop(duration) {
+      const start = document.documentElement.scrollTop || document.body.scrollTop;
+      const startTime = 'now' in window.performance ? performance.now() : new Date().getTime();
+
+      const easeInOutQuad = (t, b, c, d) => {
+        t /= d / 2;
+        if (t < 1) return c / 2 * t * t + b;
+        t--;
+        return -c / 2 * (t * (t - 2) - 1) + b;
+      };
+
+      const scroll = () => {
+        const currentTime = 'now' in window.performance ? performance.now() : new Date().getTime();
+        const timeElapsed = currentTime - startTime;
+        const nextScroll = easeInOutQuad(timeElapsed, start, -start, duration);
+
+        document.documentElement.scrollTop = nextScroll;
+        document.body.scrollTop = nextScroll;
+
+        if (timeElapsed < duration) {
+          requestAnimationFrame(scroll);
+        }
+      };
+
+      scroll();
+    }
   </script>
 </html>

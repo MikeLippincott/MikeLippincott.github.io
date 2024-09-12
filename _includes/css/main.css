@@ -676,3 +676,57 @@ footer .footer-below {
     height: auto;
 }
 
+.languages-row {
+    display: flex;
+    flex-wrap: wrap; /* Allow wrapping to multiple rows */
+    justify-content: center; /* Center the row content */
+    overflow-x: auto; /* Enable horizontal scrolling if needed */
+}
+.language-logo {
+    max-width: 100%;
+    height: auto;
+}
+
+.flex-images {
+    display: flex;
+    justify-content: flex-start; /* Align items to the start */
+    align-items: center;
+    overflow-x: auto; /* Enable horizontal scrolling */
+    white-space: nowrap; /* Prevent line breaks */
+}
+
+.image-item {
+    display: inline-block;
+    text-align: center;
+    margin-right: 10px;
+    margin-left: 10px;
+    flex-shrink: 0; /* Prevent images from shrinking */
+}
+
+.image-item p {
+    margin-top: 5px;
+    font-size: 14px;
+    color: #333;
+}
+
+.image-item:last-child {
+    margin-right: 0;
+}
+
+.image-wrapper img {
+    width: 300px; /* Set a fixed width */
+    height: 300px; /* Set a fixed height */
+    object-fit: cover; /* Ensure the image covers the entire area */
+}
+
+.image-wrapper {
+    display: inline-block;
+    text-align: center;
+    margin: 10px;
+}
+
+.image-wrapper label {
+    display: block;
+    margin-bottom: 5px;
+    font-weight: bold;
+}
