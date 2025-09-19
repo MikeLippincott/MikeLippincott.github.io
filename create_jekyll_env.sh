@@ -8,4 +8,4 @@ conda activate jekyll_env
 gem install jekyll bundler
 
 # test the installation by building a new Jekyll site
-bundle exec jekyll serve
+bundle && bundle exec jekyll serve --trace --open-url --livereload
