@@ -96,7 +96,6 @@ header {
     color: #fff;
     background: #{{ site.color.primary }};
 }
-
 header .container {
     padding-top: 1px;
     padding-bottom: 5px;
@@ -107,18 +106,6 @@ header img {
     margin: 0 auto 20px;
 }
 
-header .intro-text .name {
-    display: block;
-    text-transform: uppercase;
-    font-family: Montserrat,"Helvetica Neue",Helvetica,Arial,sans-serif;
-    font-size: 2em;
-    font-weight: 700;
-}
-
-header .intro-text .skills {
-    font-size: 1.25em;
-    font-weight: 300;
-}
 
 @media(min-width:768px) {
     header .container {
@@ -132,6 +119,19 @@ header .intro-text .skills {
 
     header .intro-text .skills {
         font-size: 1.75em;
+    }
+}
+
+/* Add mobile-specific header adjustments */
+@media(max-width:767px) {
+    header .container {
+        padding-top: 100px;
+        padding-bottom: 20px;
+    }
+    
+    header {
+        min-height: auto;
+        overflow: visible;
     }
 }
 
@@ -428,6 +428,30 @@ footer .footer-below {
     transition: transform 0.3s ease; /* Smooth transition for hover effect */
 }
 
+/* Mobile social icons - much smaller */
+@media (max-width: 768px) {
+    .btn-social {
+        width: 80px;
+        height: 80px;
+        font-size: 40px;
+        margin: 5px;
+    }
+}
+
+@media (max-width: 480px) {
+    .btn-social {
+        width: 60px;
+        height: 60px;
+        font-size: 30px;
+        margin: 3px;
+    }
+    
+    /* Also reduce spacing between social icons */
+    header .list-inline li {
+        margin: 0 5px;
+    }
+}
+
 .btn-social:hover {
     transform: scale(1.1); /* Slightly increase size on hover */
 }
@@ -720,5 +744,83 @@ footer .footer-below {
         max-width: 1400px;
         margin: 0 auto;
         justify-content: space-around; /* Prevent stretching to full width */
+    }
+}
+
+.profile-pic {
+    width: 100%;
+    max-width: 300px;
+    height: auto;
+    display: block;
+    margin: 0 auto;
+}
+
+@media (max-width: 768px) {
+    .profile-pic {
+        max-width: 200px;
+    }
+}
+
+@media (max-width: 480px) {
+    .profile-pic {
+        max-width: 150px;
+    }
+}
+
+/* Prevent horizontal overflow on mobile */
+html, body {
+    overflow-x: hidden;
+    width: 100%;
+    max-width: 100%;
+}
+
+/* Ensure header doesn't cause overflow */
+header .container {
+    width: 100%;
+    max-width: 100%;
+    padding-left: 15px;
+    padding-right: 15px;
+}
+
+/* Fix social icons container on mobile */
+@media (max-width: 768px) {
+    header .footer-col {
+        width: 100%;
+        max-width: 100%;
+        padding: 0;
+        margin: 0;
+    }
+    
+    header .list-inline {
+        display: flex;
+        justify-content: center;
+        flex-wrap: wrap;
+        padding: 0;
+        margin: 0;
+        width: 100%;
+    }
+    
+    header .list-inline li {
+        margin: 5px;
+        flex-shrink: 0;
+    }
+}
+
+/* Ensure all containers don't overflow */
+.container, .container-fluid {
+    max-width: 100%;
+    overflow-x: hidden;
+}
+
+/* Fix Bootstrap column overflow */
+@media (max-width: 768px) {
+    .row {
+        margin-left: 0;
+        margin-right: 0;
+    }
+    
+    [class*="col-"] {
+        padding-left: 10px;
+        padding-right: 10px;
     }
 }
