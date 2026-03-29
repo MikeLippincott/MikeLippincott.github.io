@@ -14,6 +14,9 @@ conda activate jekyll_env
 gem install jekyll
 gem install bundler:2.7.2
 
+# update the information
+python scripts/sync_cv_sections.py
+
 # test the installation by building a new Jekyll site
 # Use Bundler 2.7.2 explicitly and silence the CLI warning
 bundle _2.7.2_ config set default_cli_command install --global
