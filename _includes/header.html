@@ -9,19 +9,24 @@
             <hr class="star-light" />
             <span class="skills">{{ site.skills }}</span>
             <br>
-            <span class="skills">{{ site.university }} - <a href="{{ site.cv_link }}" class="custom-link" target="_blank">CV</a></span>
+            <span class="skills">{{ site.university }}</span>
             <div class="footer-col col-md-12">
           <!-- <h3>{{ site.footer.social }}</h3> -->
           <ul class="list-inline">
             {% for network in site.social %}
             <li>
+              {% if network.title == "google-scholar" %}
+              <a href="{{ network.url }}" class="btn-social btn-outline" target="_blank"><img
+                  src="img/portfolio/googlescholar.svg" alt="Google Scholar" class="social-icon-img" /></a>
+              {% else %}
               <a href="{{ network.url }}" class="btn-social btn-outline"><i
                   class="fa-brands fa-fw fa-{{ network.title }}"></i></a>
+              {% endif %}
             </li>
             {% endfor %}
           </ul>
         </div>
           </div>
-          
+
     </div>
   </header>

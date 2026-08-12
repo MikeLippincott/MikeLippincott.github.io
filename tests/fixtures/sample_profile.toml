@@ -1,0 +1,82 @@
+[person]
+full_name = "Test Person"
+email = "test@example.com"
+website = "http://example.com"
+location = "Testville, CO"
+tagline = "Test Tagline"
+
+[[education.items]]
+degree = "PhD"
+field = "Testing"
+institution = "Test University"
+location = "Testville, CO"
+start = "2020"
+end = "2024"
+
+[[research_experience.items]]
+role = "Test Researcher"
+institution = "Test Lab"
+advisor = "Dr. Advisor"
+location = "Testville, CO"
+start = "2020"
+end = "2024"
+
+[[scientific_appointments.items]]
+title = "Test Appointment"
+institution = "Test University"
+location = "Testville, CO"
+start = "2020"
+end = "Present"
+
+[[honors_awards.items]]
+name = "Test Award"
+year = "2023"
+organization = "Test Org"
+location = "Testville, CO"
+
+[[presentations.items]]
+type = "Oral presentation"
+date = "Jan. 1, 2024"
+event = "Test Talk Conference"
+location = "Testville, CO"
+title = "A talk"
+
+[[presentations.items]]
+type = "Poster presentation"
+date = "Feb. 2, 2024"
+event = "Test Poster Conference"
+location = "Testville, CO"
+title = "A poster"
+
+[[teaching_mentoring.items]]
+role = "Guest Lecturer - Test Course"
+institution = "Test University"
+location = "Testville, CO"
+date = "Mar. 3, 2024"
+
+[[journal_reviewer.items]]
+outlet = "Test Journal"
+role = "Ad hoc Reviewer"
+start = "2022"
+end = "Present"
+
+[[software_contributions.items]]
+name = "TestTool"
+description = "A tool for testing"
+year = "2024"
+url = "https://github.com/example/testtool"
+role = "lead"
+
+[skills]
+languages = ["Python", "TotallyMadeUpLanguage"]
+
+[publications]
+google_scholar = "https://scholar.google.com/citations?user=test"
+
+[[publications.items]]
+order = 1
+authors = "Test Person, Co Author"
+year = 2024
+title = "A test publication"
+venue = "Test Journal"
+doi = "https://doi.org/10.0000/test"

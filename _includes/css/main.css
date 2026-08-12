@@ -128,7 +128,7 @@ header img {
         padding-top: 100px;
         padding-bottom: 20px;
     }
-    
+
     header {
         min-height: auto;
         overflow: visible;
@@ -207,7 +207,7 @@ section.alternate {
     color: #fff; /* Change this to your desired color */
     text-decoration: underline; /* Add underline to make it more visible */
   }
-  
+
   .custom-link:hover {
     color: #000; /* Change this to your desired hover color */
   }
@@ -426,6 +426,16 @@ footer .footer-below {
     font-size: 75px;
     line-height: 1; /* Ensure line height does not affect centering */
     transition: transform 0.3s ease; /* Smooth transition for hover effect */
+    /* An inline-flex box's baseline in the surrounding row depends on its
+       content type (font icon vs <img>), which misaligned the Google
+       Scholar button against the others. Force a consistent alignment. */
+    vertical-align: middle;
+}
+
+.social-icon-img {
+    width: 55%;
+    height: 55%;
+    object-fit: contain;
 }
 
 /* Mobile social icons - much smaller */
@@ -445,7 +455,7 @@ footer .footer-below {
         font-size: 30px;
         margin: 3px;
     }
-    
+
     /* Also reduce spacing between social icons */
     header .list-inline li {
         margin: 0 5px;
@@ -568,7 +578,7 @@ footer .footer-below {
     border-radius: 10px; /* Rounded corners */
     font-size: 18px; /* Increase font size */
   }
-  
+
   #back-to-top:hover {
     background-color: #555; /* Add a dark-grey background on hover */
   }
@@ -603,12 +613,18 @@ footer .footer-below {
     text-align: center;
 }
 
+/* remove default bullet markers from every generated CV section list */
+section ul {
+    list-style-type: none;
+    padding-left: 0;
+}
+
 /* publications style */
 #publications ul {
     list-style-type: none; /* Remove default list styling */
     padding: 10;
   }
-  
+
   #publications ul li {
     background-color: #1BA698; /* Light background color for the tiles */
     border: 1px solid #ddd; /* Border around each tile */
@@ -618,7 +634,7 @@ footer .footer-below {
     box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1); /* Subtle shadow for depth */
     font-size: 1.25em; /* Larger font size */
   }
-  
+
   #publications ul li p {
     margin: 10px 0; /* Space between paragraphs */
   }
@@ -628,7 +644,7 @@ footer .footer-below {
     list-style-type: none; /* Remove default list styling */
     padding: 0;
   }
-/* 
+/*
   /* make tile two column */ */
     /* #scientific-appointments ul {
         display: flex;
@@ -644,7 +660,7 @@ footer .footer-below {
     }
 
 
-  
+
   #scientific-appointments ul li {
     background-color: #1BA698; /* Light background color for the tiles */
     border: 1px solid #ddd; /* Border around each tile */
@@ -655,7 +671,7 @@ footer .footer-below {
     font-size: 1.25em; /* Larger font size */
     line-height: 1.5; /* Line height for better readability */
   }
-  
+
   #scientific-appointments ul li p {
     margin: 10px 0; /* Space between paragraphs */
   }
@@ -680,10 +696,45 @@ footer .footer-below {
     border-radius: 10px;
     box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
     transition: transform 0.3s ease;
+    position: relative;
+    overflow: hidden;
 }
 
 .tile:hover {
     transform: scale(1.5);
+}
+
+.skill-tile {
+    cursor: pointer;
+}
+
+.skill-tile:focus {
+    outline: none;
+}
+
+.tile-caption {
+    position: absolute;
+    inset: 0;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    padding: 10px;
+    text-align: center;
+    font-size: 0.85rem;
+    font-weight: 600;
+    line-height: 1.2;
+    color: #fff;
+    background: rgba(0, 0, 0, 0.72);
+    border-radius: inherit;
+    opacity: 0;
+    transition: opacity 0.2s ease;
+    pointer-events: none;
+}
+
+.skill-tile:hover .tile-caption,
+.skill-tile:focus .tile-caption,
+.skill-tile.show-caption .tile-caption {
+    opacity: 1;
 }
 
 .language-logo {
@@ -696,6 +747,15 @@ footer .footer-below {
 
 .language-logo:hover {
     transform: scale(1.1);
+}
+
+.language-badge {
+    color: #fff;
+    font-weight: 600;
+    text-align: center;
+    padding: 0 10px;
+    font-size: 0.95rem;
+    line-height: 1.2;
 }
 
 .flex-images {
@@ -790,7 +850,7 @@ header .container {
         padding: 0;
         margin: 0;
     }
-    
+
     header .list-inline {
         display: flex;
         justify-content: center;
@@ -799,7 +859,7 @@ header .container {
         margin: 0;
         width: 100%;
     }
-    
+
     header .list-inline li {
         margin: 5px;
         flex-shrink: 0;
@@ -818,7 +878,7 @@ header .container {
         margin-left: 0;
         margin-right: 0;
     }
-    
+
     [class*="col-"] {
         padding-left: 10px;
         padding-right: 10px;

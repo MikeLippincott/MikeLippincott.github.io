@@ -1,0 +1,26 @@
+[project]
+name = "mikelippincott-github-io"
+version = "0.1.0"
+description = "Build/sync tooling for the mikelippincott.github.io Jekyll site"
+requires-python = ">=3.11"
+dependencies = []
+
+[dependency-groups]
+dev = [
+    "pytest>=8.0",
+    "black>=24.0",
+    "isort>=5.13",
+    "pycln>=2.4",
+]
+
+[tool.uv]
+package = false
+
+[tool.black]
+line-length = 88
+
+[tool.isort]
+profile = "black"
+
+[tool.pytest.ini_options]
+testpaths = ["tests"]

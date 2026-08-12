@@ -1,0 +1,456 @@
+# CV Profile Schema (TOML)
+# Source: CV_assemble/CV.md (LaTeX CV content)
+# Schema version: 1.0.0
+
+[schema]
+name = "cv_profile"
+version = "1.0.0"
+source_file = "CV_assemble/CV.md"
+source_format = "latex"
+
+[person]
+full_name = "Michael J. Lippincott"
+email = "1michaell2017@gmail.com"
+website = "http://www.mikelippincott.github.io"
+location = "Aurora, CO"
+tagline = "PhD Candidate, Computational Cell Biology --- University of Colorado Anschutz Medical Campus"
+
+[education]
+# Use [[education.items]] for each degree entry
+
+[[education.items]]
+degree = "PhD"
+field = "Computational Cell Biology"
+institution = "University of Colorado Anschutz Medical Campus"
+location = "Aurora, CO"
+start = "Aug. 2022"
+end = "May. 2027"
+
+[[education.items]]
+degree = "BS"
+field = "Biochemistry and Data Science"
+institution = "Maryville University of Saint Louis"
+location = "Saint Louis, MO"
+start = "Aug. 2017"
+end = "May. 2021"
+
+[research_experience]
+# Use [[research_experience.items]] for each research role
+
+[[research_experience.items]]
+role = "PhD Research - Computational Cell Biology"
+institution = "University of Colorado"
+advisor = "Gregory P. Way, PhD"
+location = "Aurora, CO"
+start = "Aug. 2022"
+end = "Present"
+
+[[research_experience.items]]
+role = "Post-baccalaureate Research Assistant - Genomics"
+institution = "University of North Carolina at Chapel Hill"
+advisor = "Shawn Ahmed"
+location = "Chapel Hill, NC"
+start = "2021"
+end = "2022"
+
+[[research_experience.items]]
+role = "Research Assistant - Genome editing"
+institution = "Centro de Technologia Canavieria"
+location = "Saint Louis, MO"
+start = "2020"
+end = "2021"
+
+[[research_experience.items]]
+role = "Undergraduate Research Assistant - Quantitative spectroscopy"
+institution = "Maryville University of Saint Louis"
+advisor = "Thomas Spudich, PhD"
+location = "Saint Louis, MO"
+start = "2019"
+end = "2020"
+
+[[research_experience.items]]
+role = "Undergraduate Research Assistant - Cell Biology"
+institution = "Maryville University of Saint Louis"
+advisor = "Stacy L. Donovan, PhD"
+location = "Saint Louis, MO"
+start = "2018"
+end = "2021"
+
+[[research_experience.items]]
+role = "Research Internship - Biochemistry"
+institution = "Elemental Enzymes"
+location = "Saint Louis, MO"
+start = "2018"
+end = "2019"
+
+[scientific_appointments]
+# Use [[scientific_appointments.items]] for committee/service/appointment roles
+
+[[scientific_appointments.items]]
+title = "PhD student"
+institution = "University of Colorado Anschutz Medical Campus"
+location = "Aurora, CO"
+start = "Aug. 2022"
+end = "Present"
+
+[[scientific_appointments.items]]
+title = "Wellbeing and engagement committee, Department of Biomedical Informatics"
+institution = "University of Colorado Anschutz Medical Campus"
+location = "Aurora, CO"
+start = "Jul. 2024"
+end = "Jul. 2026"
+
+[[scientific_appointments.items]]
+title = "Journal Club Committee, Cell Biology, Stem Cells, and Development"
+institution = "University of Colorado Anschutz Medical Campus"
+location = "Aurora, CO"
+start = "2023"
+end = "2025"
+
+[[scientific_appointments.items]]
+title = "Volunteer"
+institution = "Clear Directions Mentoring"
+location = "Aurora, CO"
+start = "2023"
+end = "Present"
+
+[[scientific_appointments.items]]
+title = "Cell Biology Graduate Teaching Assistant"
+institution = "University of Colorado Anschutz Medical Campus"
+location = "Aurora, CO"
+start = "2023"
+end = "Present"
+
+[[scientific_appointments.items]]
+title = "Research Assistant"
+institution = "University of North Carolina at Chapel Hill"
+location = "Chapel Hill, NC"
+start = "May. 2021"
+end = "May. 2022"
+
+[[scientific_appointments.items]]
+title = "Teaching Aid – Chemistry/Cell Biology"
+institution = "Maryville University of Saint Louis"
+location = "Saint Louis, MO"
+start = "2019"
+end = "2021"
+
+[[scientific_appointments.items]]
+title = "Lab technician training manager"
+institution = "Maryville University of Saint Louis"
+location = "Saint Louis, MO"
+start = "2019"
+end = "2021"
+
+[[scientific_appointments.items]]
+title = "Biology and Maths Tutor"
+institution = "Maryville University of Saint Louis"
+location = "Saint Louis, MO"
+start = "2017"
+end = "2019"
+
+[presentations]
+# Use [[presentations.items]] for invited talks, oral presentations, and posters
+[[presentations.items]]
+type = "Oral presentation"
+date = "6/30/2026"
+event = "Children's Tumor Foundation - NF Research Conference"
+location = "Denver, CO"
+title = "Evaluating Cell Painting and image-based profiling strategies for NF1 patient-derived 3D organoids"
+
+[[presentations.items]]
+type = "Oral presentation"
+date = "June 22, 2026"
+event = "Cold Spring Harbor Laboratory - Cell modeling in space and time"
+location = "Cold Spring Harbor, NY"
+title = "High-content live-cell time-lapse imaging for profiling cell death"
+
+[[presentations.items]]
+type = "Poster presentation"
+date = "May 20, 2026"
+event = "Society for Laboratory Automation and Screening (SLAS) Europe"
+location = "Vienna, Austria"
+title = "3D image-based profiling of patient-derived organoid drug screening"
+
+
+[[presentations.items]]
+type = "Invited speaker"
+date = "Jan. 28, 2026"
+event = "Michael Johnson Seminar Series"
+host = "Maryville University"
+location = "Saint Louis, MO"
+title = "High dimensional microscopy for high-content high-throughput drug screens"
+
+[[presentations.items]]
+type = "Oral presentation"
+date = "Dec. 4, 2025"
+event = "Neurofibramatosis Young Investigator's Forum"
+location = "Baltimore, MD"
+title = "3D Microscopy Framework in Patient-Derived NF1 Organoid Drug Screening"
+
+[[presentations.items]]
+type = "Oral presentation"
+date = "Oct. 27, 2025"
+event = "Society of Biomolecular Imaging and Informatics"
+location = "Boston, MA"
+title = "High-content live-cell time-lapse imaging predicts cells about to die via apoptosis"
+
+[[presentations.items]]
+type = "Poster presentation"
+date = "Oct. 26, 2025"
+event = "Society of Biomolecular Imaging and Informatics"
+location = "Boston, MA"
+title = "3D Deep Learning Microscopy Framework in Patient-Derived NF1 Organoid Drug Screening"
+
+
+[[presentations.items]]
+type = "Oral presentation"
+date = "Oct. 24, 2025"
+event = "Cell Biology, Stem Cells, and Development Retreat"
+location = "Estes Park, CO"
+title = "3D Deep Learning Microscopy Framework in Patient-Derived NF1 Organoid Drug Screening"
+
+[[presentations.items]]
+type = "Poster presentation"
+date = "Feb. 10, 2025"
+event = "Systems applications for cancer biology"
+location = "Aurora, CO"
+title = "A morphology and secretome map of pyroptosis"
+
+[[presentations.items]]
+type = "Oral presentation"
+date = "Dec. 3, 2024"
+event = "American Society for Cell Biology Cell Bio conference"
+location = "San Diego, CA"
+title = "A morphology and secretome map of pyroptosis"
+
+[[presentations.items]]
+type = "Poster presentation"
+date = "Oct. 18, 2024"
+event = "Cell Biology, Stem Cells, and Development Retreat"
+location = "Breckinridge, CO"
+title = "A morphology and secretome map of pyroptosis"
+
+[[presentations.items]]
+type = "Poster presentation"
+date = "Aug. 27, 2024"
+event = "Center for Health Artificial Intelligence Retreat"
+location = "Denver, CO"
+title = "A morphology and secretome map of pyroptosis"
+
+[[presentations.items]]
+type = "Oral presentation"
+date = "Jul. 18, 2024"
+event = "Computational Systems for Integrative Genomics"
+location = "New York, NY"
+title = "A morphology and secretome map of pyroptosis"
+
+[[presentations.items]]
+type = "Poster presentation"
+date = "Dec. 3, 2023"
+event = "American Society for Cell Biology Cell Bio conference"
+location = "Boston, MA"
+title = "A morphology and secretome map of pyroptosis"
+
+[[presentations.items]]
+type = "Oral presentation"
+date = "Aug. 19, 2023"
+event = "Center for Health Artificial Intelligence Retreat"
+location = "Aurora, CO"
+title = "A morphology and secretome map of pyroptosis"
+
+[[presentations.items]]
+type = "Poster presentation"
+date = "Oct. 13, 2023"
+event = "Cell Biology, Stem Cells, and Development Retreat"
+location = "Breckinridge, CO"
+title = "A morphology and secretome map of pyroptosis"
+
+[honors_awards]
+# Use [[honors_awards.items]] for each award
+
+[[honors_awards.items]]
+name = "Neurofibromatosis Young Investigator's Forum Travel Award"
+year = "2025"
+organization = "Neurofibromatosis Young Investigator's Forum"
+location = "Baltimore, MD"
+
+[[honors_awards.items]]
+name = "SBI2 Travel Award, Yokogawa Electric Corporation"
+year = "2025"
+organization = "Society for Biomolecular Imaging and Informatics"
+location = "Boston, MA"
+
+[[honors_awards.items]]
+name = "Best Oral Presentation"
+year = "2021"
+organization = "Maryville University Research Conference"
+location = "Saint Louis, MO"
+
+[[honors_awards.items]]
+name = "Excellence in Biological & Physical Sciences"
+year = "2021"
+organization = "Maryville University"
+location = "Saint Louis, MO"
+
+[[honors_awards.items]]
+name = "Best Poster Award"
+year = "2019"
+organization = "Maryville University Research Conference"
+location = "Saint Louis, MO"
+
+[[honors_awards.items]]
+name = "Outstanding Junior Chemistry Student"
+year = "2019"
+organization = "American Chemical Society"
+location = "Saint Louis, MO"
+
+[teaching_mentoring]
+# Use [[teaching_mentoring.items]] for mentoring and lecturing
+
+[[teaching_mentoring.items]]
+role = "Mentor - High School Student"
+institution = "University of Colorado Anschutz Medical Campus"
+location = "Aurora, CO"
+start = "Jan 2026"
+end = "Present"
+
+[[teaching_mentoring.items]]
+role = "Guest Lecturer - CPBS 7601 Reproducible Computational methods course"
+institution = "University of Colorado Anschutz Medical Campus"
+location = "Aurora, CO"
+date = "Oct. 17, 2025"
+
+[[teaching_mentoring.items]]
+role = "Guest Lecturer - Leveraging AI in Cell Biology"
+institution = "Maryville University of Saint Louis"
+location = "Saint Louis, MO"
+date = "Apr. 10, 2025"
+
+[[teaching_mentoring.items]]
+role = "Guest Lecturer - CPBS 7601 Reproducible Computational methods course"
+institution = "University of Colorado Anschutz Medical Campus"
+location = "Aurora, CO"
+date = "Nov. 15, 2024"
+
+[journal_reviewer]
+# Use [[journal_reviewer.items]] for recurring reviewer roles
+
+[[journal_reviewer.items]]
+outlet = "Review Commons"
+role = "Ad hoc Reviewer"
+start = "2025"
+end = "Present"
+
+[[journal_reviewer.items]]
+outlet = "Cell"
+role = "Ad hoc Reviewer"
+start = "2024"
+end = "Present"
+
+[[journal_reviewer.items]]
+outlet = "Molecular Biology of the Cell"
+role = "Ad hoc Reviewer"
+start = "2024"
+end = "Present"
+
+[[journal_reviewer.items]]
+outlet = "BiorXiv"
+role = "Ad hoc Reviewer"
+start = "2023"
+end = "Present"
+
+[software_contributions]
+[[software_contributions.items]]
+name = "ZedProfiler"
+description = "CPU-first 3D image feature extraction toolkit for high-content and high-throughput image-based profiling."
+year = "2026"
+url = "https://github.com/WayScience/ZedProfiler"
+role = "lead"
+
+[[software_contributions.items]]
+name = "CytoTable"
+description = "A tool for scalable data harmonization for single-cell image-based profiling"
+year = "2025"
+url = "https://github.com/cytotable/cytotable"
+role = "support"
+
+
+[skills]
+languages = ["Python", "R", "SQL", "Bash", "Nextflow"]
+distributed_compute = ["HPC Orchestration (SLURM)", "Nextflow", "Cloud (AWS, GCP)", "terraform"]
+technologies = ["Singularity/Apptainer", "Docker", "Git"]
+frameworks = ["Pytorch", "Scikit-learn", "Pandas", "NumPy", "SciPy", "Optuna", "Seaborn"]
+visualization = ["Matplotlib", "Seaborn", "ggoplot2", "Plotly", "dash"]
+image_software = ["CellProfiler", "napari", "Fiji/ImageJ"]
+core_skills = ["Database Management","Statistical Analysis", "Data Visualization", "Data Wrangling", "Data Mining"]
+Artificial_Intelligence = ["Computer Vision", "ViTs", "Graph-based Learning", "Agentic AI"]
+
+[publications]
+google_scholar = "https://scholar.google.com/citations?user=mTdpDrwAAAAJ&hl=en"
+
+
+[[publications.items]]
+order = 10
+authors = "Michael J. Lippincott, Alberto Mendoza-Valderrey, Jenna Tomkinson, Dave Bunten, Sara Gosline, Alice Soragni, Gregory P. Way"
+year = 2026
+title = "Three-dimensional image-based profiling of NF1 patient-derived organoids uncovers heterogeneous drug response landscapes"
+status = "In Preparation"
+
+[[publications.items]]
+order = 11
+authors = "Michael J. Lippincott, Jenna Tomkinson, Ibrahim Bilem, Mahomi Suzuki, Akiko Nakde, Toshiaki Endou, Simon Mathien, Felix Lavoie-Perusse, Carla Basualto-Alarcón, Gregory P Way"
+year = 2025
+title = "High-content live-cell time-lapse imaging predicts cells about to die via apoptosis"
+status = "In Review"
+venue = "Cell Reports Methods"
+preprint = "bioRxiv"
+doi = "https://doi.org/10.1101/2025.10.23.684203"
+
+[[publications.items]]
+order = 12
+authors = "Dave Bunten, Jenna Tomkinson, Erik Serrano, Michael J. Lippincott, Kenneth I. Brewer, Vince Rubinetti, Faisal Alquaddoomi, Gregory P. Way"
+year = 2025
+title = "Scalable data harmonization for single-cell image-based profiling with CytoTable"
+venue = "Patterns"
+doi = "https://doi.org/10.1016/j.patter.2026.101514"
+
+[[publications.items]]
+order = 13
+authors = "Erik Serrano, John Peters, Jesko Wagner, Rebecca E. Graham, Zhenghao Chen, Brian Feng, Gisele Miranda, Alexandr A. Kalinin, Loan Vulliard, Jenna Tomkinson, Cameron Mattson, Michael J. Lippincott, Ziqi Kang, Divya Sitani, Dave Bunten, Srijit Seal, Neil O. Carragher, Anne E. Carpenter, Shantanu Singh, Paula A. Marin Zapata, Juan C. Caicedo, Gregory P. Way"
+year = 2025
+title = "Progress and new challenges in image-based profiling"
+venue = "Molecular Systems Biology"
+doi = "https://doi.org/10.1038/s44320-026-00197-7"
+
+[[publications.items]]
+order = 14
+authors = "Abigail Mumme-Monheit, Grace E. Gustafson, Colette A. Hopkins, Raisa Bailon-Zambrano, Juliana Sucharov, Michael J. Lippincott, Gregory P. Way, Kathryn L. Colborn, James T. Nichols"
+year = 2025
+title = "A quadratic paradigm describes the relationship between phenotype severity and variation"
+venue = "Nature Communications"
+doi = "https://doi.org/10.1038/s41467-025-63316-2"
+
+[[publications.items]]
+order = 15
+authors = "Michael J. Lippincott, Jenna Tomkinson, Dave Bunten, Milad Mohammadi, Johanna Kastl, Johannes Knop, Ralf Schwandner, Jiamin Huang, Grant Ongo, Nathaniel Robichaud, Milad Dagher, Masafumi Tsuboi, Carla Basualto-Alarcón, Gregory P. Way"
+year = 2025
+title = "A morphology and secretome map of pyroptosis"
+venue = "MBoC"
+doi = "https://doi.org/10.1091/mbc.E25-03-0119"
+
+[[publications.items]]
+order = 16
+authors = "Srivastava H, Michael J. Lippincott, Currie J, Canfield R, Lam MPY, Lau E"
+year = 2022
+title = "Protein prediction models support widespread post-transcriptional regulation of protein abundance by interacting partners"
+venue = "PLOS Computational Biology"
+doi = "https://doi.org/10.1371/journal.pcbi.1010702"
+
+[[publications.items]]
+order = 17
+authors = "Lister-Shimauchi EH, McCarthy B, Michael J. Lippincott, Ahmed S"
+year = 2022
+title = "Genetic and Epigenetic Inheritance at Telomeres"
+venue = "Epigenomes"
+doi = "https://doi.org/10.3390/epigenomes6010009"

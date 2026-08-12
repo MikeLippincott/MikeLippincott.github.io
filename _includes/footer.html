@@ -8,8 +8,13 @@
           <ul class="list-inline">
             {% for network in site.social %}
             <li>
+              {% if network.title == "google-scholar" %}
+              <a href="{{ network.url }}" class="btn-social btn-outline" target="_blank"><img
+                  src="img/portfolio/googlescholar.svg" alt="Google Scholar" class="social-icon-img" /></a>
+              {% else %}
               <a href="{{ network.url }}" class="btn-social btn-outline"><i
                   class="fa-brands fa-fw fa-{{ network.title }}"></i></a>
+              {% endif %}
             </li>
             {% endfor %}
           </ul>
