@@ -1,4 +1,4 @@
-<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 100 100" fill="none" stroke="#ffffff" stroke-width="5" stroke-linecap="round" stroke-linejoin="round">
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 100 100" fill="none" stroke="#5b3e9e" stroke-width="5" stroke-linecap="round" stroke-linejoin="round">
   <title>Data Visualization</title>
   <circle cx="50" cy="50" r="34"/>
   <path d="M50 16v34l24 24" fill="none"/>
