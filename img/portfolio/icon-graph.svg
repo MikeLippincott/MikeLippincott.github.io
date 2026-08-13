@@ -1,0 +1,10 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 100 100" fill="none" stroke="#5b3e9e" stroke-width="4" stroke-linecap="round" stroke-linejoin="round">
+  <title>Graph-based Learning</title>
+  <path d="M50 22 20 42M50 22l30 20M20 42v26M80 42v26M20 68l30 12M80 68 50 80M50 22V10M20 42H10M80 42h10M20 68l-8 6M80 68l8 6M50 80v10"/>
+  <circle cx="50" cy="22" r="9" fill="#5b3e9e" stroke="none"/>
+  <circle cx="20" cy="42" r="9" fill="#5b3e9e" stroke="none"/>
+  <circle cx="80" cy="42" r="9" fill="#5b3e9e" stroke="none"/>
+  <circle cx="20" cy="68" r="9" fill="#5b3e9e" stroke="none"/>
+  <circle cx="80" cy="68" r="9" fill="#5b3e9e" stroke="none"/>
+  <circle cx="50" cy="80" r="9" fill="#5b3e9e" stroke="none"/>
+</svg>

@@ -6,7 +6,6 @@ description: ""
 keywords: ""
 skills: "Computational Cell Biologist - PhD Candidate"
 university: "University of Colorado Anschutz Medical Campus"
-cv_link: "https://github.com/MikeLippincott/MikeLippincott/blob/main/Michael_J_Lippincott_CV_2026_06.pdf"
 meta_author: Lippincott Michael
 
 # Google webmaster tools
@@ -33,8 +32,8 @@ footer:
 social:
   - title: github
     url: http://github.com/MikeLippincott
-  - title: x
-    url: https://x.com/mike_lippincott
+  - title: google-scholar
+    url: https://scholar.google.com/citations?user=mTdpDrwAAAAJ&hl=en
   - title: linkedin
     url: https://www.linkedin.com/in/mlippincott/
   - title: orcid

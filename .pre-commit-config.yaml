@@ -1,0 +1,51 @@
+# Third-party/vendored assets we don't want reformatted (minified JS/CSS,
+# Font Awesome, generated site output, etc.)
+exclude: |
+  (?x)^(
+    js/.*|
+    css/.*|
+    _includes/css/bootstrap\.min\.css|
+    _site/.*|
+    \.jekyll-cache/.*|
+    img/.*|
+    Gemfile\.lock|
+    freelancer-theme-jekyll\.gemspec
+  )$
+
+repos:
+  # Formats import order
+  - repo: https://github.com/pycqa/isort
+    rev: 5.13.2
+    hooks:
+      - id: isort
+        name: isort (python)
+        args: ["--profile", "black", "--filter-files"]
+        files: ^(scripts|tests)/
+
+  # Code formatter for python files
+  - repo: https://github.com/psf/black
+    rev: 24.10.0
+    hooks:
+      - id: black
+        language_version: python3.11
+        files: ^(scripts|tests)/
+
+  # Remove unused imports
+  - repo: https://github.com/hadialqattan/pycln.git
+    rev: v2.6.0
+    hooks:
+      - id: pycln
+        files: ^(scripts|tests)/
+
+  # General file hygiene
+  - repo: https://github.com/pre-commit/pre-commit-hooks
+    rev: v5.0.0
+    hooks:
+      - id: trailing-whitespace
+      - id: end-of-file-fixer
+      - id: mixed-line-ending
+        args: ["--fix=lf"]
+      - id: check-yaml
+      - id: check-json
+      - id: check-merge-conflict
+      - id: check-added-large-files

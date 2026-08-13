@@ -9,10 +9,13 @@
   {% include nav.html %}
   {% include header.html %}
   {% include about.html %}
+  {% include education.html %}
+  {% include research_experience.html %}
   {% include publications.html %}
   {% include scientific_appointments.html %}
   {% include presentations.html %}
-  {% include languages.html %}
+  {% include software_contributions.html %}
+  {% include skills.html %}
   {% include footer.html %}
   {% include js.html %}
   <button id="back-to-top" title="Back to Top">
@@ -22,12 +25,12 @@
 </body>
 <script>
     var mybutton = document.getElementById("back-to-top");
-  
+
     // When the user scrolls down 20px from the top of the document, show the button
     window.onscroll = function() {
       scrollFunction();
     };
-  
+
     function scrollFunction() {
       if (document.body.scrollTop > 20 || document.documentElement.scrollTop > 20) {
         mybutton.style.display = "block";
@@ -35,7 +38,7 @@
         mybutton.style.display = "none";
       }
     }
-  
+
     // When the user clicks on the button, scroll to the top of the document with easing
     mybutton.onclick = function() {
       scrollToTop(1000); // Duration in milliseconds

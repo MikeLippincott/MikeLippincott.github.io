@@ -1,38 +1,50 @@
 set shell := ["bash", "-cu"]
 
-# Create and sync the local uv environment with all project dependency groups.
-env:
-  #!/bin/bash
-  # check if the conda environment already exists
-  if conda info --envs | grep -q 'jekyll_env'; then
-    echo "Updating conda environment 'jekyll_env'..."
-    mamba env update -f jekyll_env.yaml
-  else
-      echo "Creating new conda environment 'jekyll_env'..."
-      mamba env create -f jekyll_env.yaml
-  fi
-  conda activate jekyll_env
-  # Install Jekyll
-  gem install jekyll
-  gem install bundler:2.7.2
+# --- Python (uv) -----------------------------------------------------------
 
-update_site:
-  #!/bin/bash
-    # update the information
-    conda activate jekyll_env
+# Create/sync the local uv-managed virtualenv (scripts/ + tests/ deps).
+venv:
+    uv sync --group dev
 
-    python scripts/sync_cv_sections.py
+# Refresh the vendored data/cv_profile.toml from the local CV_assemble checkout
+# (sibling repo). Run this whenever the CV content changes, before `just sync`.
+refresh-cv-data cv_repo="../MikeLippincott/CV_assemble":
+    cp {{cv_repo}}/cv_profile.toml data/cv_profile.toml
+    @echo "Refreshed data/cv_profile.toml from {{cv_repo}}/cv_profile.toml"
 
-bundle_install:
-    #!/bin/bash
-    conda activate jekyll_env
-    # test the installation by building a new Jekyll site
-    # Use Bundler 2.7.2 explicitly and silence the CLI warning
-    bundle _2.7.2_ config set default_cli_command install --global
-    bundle _2.7.2_ install
+# Regenerate all _includes/*.html sections from data/cv_profile.toml.
+sync *ARGS:
+    uv run scripts/sync_cv_sections.py {{ARGS}}
 
-    # Serve the site using the pinned Bundler version
-    bundle _2.7.2_ exec jekyll serve --trace --open-url --livereload
+# Run the Python test suite (sync_cv_sections unit tests + Jekyll build check).
+test:
+    uv run pytest tests/ -v
 
-all:
-    just env update_site bundle_install
+# Format + lint the Python sources.
+lint:
+    uv run isort --profile black scripts tests
+    uv run black scripts tests
+    uv run pycln scripts tests
+
+# Run every pre-commit hook (Python formatting, file hygiene, Rubocop) on all files.
+precommit:
+    pre-commit run --all-files
+
+# --- Ruby / Jekyll (rbenv + Bundler, no conda) ------------------------------
+
+# Install Ruby gems for the Jekyll site.
+bundle-install:
+    bundle install
+
+# Serve the site locally with livereload.
+serve: bundle-install
+    bundle exec jekyll serve --trace --livereload
+
+# Build the static site into _site/.
+build: bundle-install
+    bundle exec jekyll build
+
+# --- Composite ---------------------------------------------------------------
+
+# Full local pipeline: install everything, sync CV data, run tests, build the site.
+all: venv bundle-install sync test build serve

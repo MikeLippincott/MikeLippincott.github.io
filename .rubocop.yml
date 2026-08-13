@@ -1,0 +1,16 @@
+AllCops:
+  NewCops: enable
+  TargetRubyVersion: 3.2
+  Exclude:
+    - "vendor/**/*"
+    - "_site/**/*"
+    - ".jekyll-cache/**/*"
+
+Style/Documentation:
+  Enabled: false
+
+Style/FrozenStringLiteralComment:
+  Enabled: false
+
+Layout/LineLength:
+  Max: 100
